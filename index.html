@@ -7,10 +7,26 @@
     <title>Vite + Lit + TS</title>
     <link rel="stylesheet" href="./src/index.css" />
     <script type="module" src="/src/my-element.ts"></script>
+    <script type="module" src="/src/stories/my-button.ts"></script>
+    <script type="module" src="/src/stories/my-timer.ts"></script>
+    <script type="module" src="/src/components/syl-button.ts"></script>
   </head>
   <body>
-    <my-element>
-      <h1>Vite + Lit</h1>
-    </my-element>
+    <div>
+      <my-element>
+        <h1>Vite + Lit</h1>
+      </my-element>
+    </div>
+    <div>
+      <my-button primary="true">Button component</my-button>
+    </div>
+    <div>
+      <syl-button disabled="true">SylButton component</syl-button>
+    </div>
+    <div>
+      <my-timer duration="7"></my-timer>
+      <my-timer duration="60"></my-timer>
+      <my-timer duration="300"></my-timer>
+    </div>
   </body>
 </html>

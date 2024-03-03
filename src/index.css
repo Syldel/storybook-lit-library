@@ -25,10 +25,13 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+}
+
+body > div {
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {
