@@ -1,4 +1,4 @@
-# storybook-lit-library
+# syl-lit-library
 
 Build a Web Component Library using Storybook and Lit
 

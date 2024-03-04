@@ -1,8 +1,9 @@
 {
-  "name": "storybook-lit",
-  "private": true,
-  "version": "0.0.0",
+  "name": "syl-lit-library",
+  "version": "0.0.2",
+  "main": "dist/assets/index*.js",
   "type": "module",
+  "description": "Web components library",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -40,6 +41,12 @@
     "vite": "^4.4.5",
     "vite-plugin-turbosnap": "^1.0.3"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "storybook-lit@0.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Syldel/syl-lit-library.git"
+  },
+  "license": "MIT",
+  "files": [
+    "dist/index*.js"
+  ]
 }
