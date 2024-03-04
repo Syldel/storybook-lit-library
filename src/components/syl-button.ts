@@ -2,19 +2,19 @@ import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { buttonStyles } from "./button-styles.ts";
 
-@customElement("syl-element")
-export class SylElement extends LitElement {
-  @property({ type: Number })
-  primary?: boolean;
-
-  @property({ type: String })
-  backgroundColor?: string;
+@customElement("syl-button")
+export class SylButton extends LitElement {
+  @property()
+  size?: "small" | "medium" | "large" = "medium";
 
   @property()
-  size?: "small" | "medium" | "large";
+  mode?: "primary" | "secondary" = "primary";
 
-  @property({ type: String })
-  label?: string;
+  @property({ type: Boolean })
+  outlined: boolean = false;
+
+  @property({ type: Boolean }) // , reflect: true
+  disabled: boolean = false;
 
   static styles = [
     buttonStyles,
@@ -26,24 +26,35 @@ export class SylElement extends LitElement {
     `,
   ];
 
+  hostclass = "syl-button";
+
   render() {
+    const classList = [
+      this.hostclass,
+      `${this.hostclass}--${this.size}`,
+      `${this.hostclass}--${this.mode}`,
+    ];
+    if (this.outlined) {
+      classList.push(`${this.hostclass}--outlined`);
+    }
+    if (this.disabled) {
+      classList.push(`${this.hostclass}--disabled`);
+    }
+
     return html`
       <button
         type="button"
-        class=${["my-button", `my-button--${size || "medium"}`, mode].join(" ")}
-        style=${styleMap({ backgroundColor })}
-        @click=${onClick}
+        ?disabled=${this.disabled}
+        class=${classList.join(" ")}
       >
-        ${label}
+        <slot></slot>
       </button>
     `;
   }
 }
 
-/*
 declare global {
   interface HTMLElementTagNameMap {
-    'my-element': MyElement
+    "syl-button": SylButton;
   }
 }
-*/

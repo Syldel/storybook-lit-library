@@ -1,14 +1,10 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
-/* playground-fold */
 import { play, pause, replay } from "./icons.js";
-/* playground-fold-end */
 
 @customElement("my-timer")
 export class MyTimer extends LitElement {
   static styles = css`
-    /* playground-fold */
-
     :host {
       display: inline-block;
       min-width: 4em;
@@ -20,7 +16,6 @@ export class MyTimer extends LitElement {
       user-select: none;
       font-size: 0.6em;
     }
-    /* playground-fold-end */
   `;
 
   @property() duration = 60;
@@ -44,7 +39,6 @@ export class MyTimer extends LitElement {
       </footer>
     `;
   }
-  /* playground-fold */
 
   start() {
     this.end = Date.now() + this.remaining;
@@ -75,10 +69,9 @@ export class MyTimer extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this.reset();
-  } /* playground-fold-end */
+  }
 }
-/* playground-fold */
 
 function pad(pad: unknown, val: number) {
   return pad ? String(val).padStart(2, "0") : val;
-} /* playground-fold-end */
+}
