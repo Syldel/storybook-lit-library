@@ -21,7 +21,14 @@ export class SylButton extends LitElement {
     css`
       :host {
         display: block;
-        border: 1px solid black;
+        //border: 1px solid black;
+      }
+      .syl-button {
+        display: inline-block;
+        padding: 10px;
+        background: #5fe1ee;
+        border-radius: 5px;
+        cursor: pointer;
       }
     `,
   ];

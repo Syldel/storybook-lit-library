@@ -1,11 +1,15 @@
 # syl-lit-library
 
-Build a Web Component Library using Storybook and Lit
+Build a shareable Web Component Library using Storybook and Lit
 
-## Github Actions
+## Chromatic
+
+Chromatic is a visual testing & review tool that scans every possible UI state across browsers to catch visual and functional bugs.
+
+### Github Actions
 
 Security > Secrets and variables > Actions > Secrets tab
-Add Chromatic project token : secrets.CHROMATIC_PROJECT_TOKEN
+Add Chromatic project token : CHROMATIC_PROJECT_TOKEN
 
 ## AWS
 
@@ -17,17 +21,13 @@ Dans "Autorisations"
 
 - "Partage des ressources entre origines (CORS)" :
 
-```
+```json
 [
-    {
-        "AllowedHeaders": [],
-        "AllowedMethods": [
-            "GET"
-        ],
-        "AllowedOrigins": [
-            "*"
-        ],
-        "ExposeHeaders": []
-    }
+  {
+    "AllowedHeaders": [],
+    "AllowedMethods": ["GET"],
+    "AllowedOrigins": ["*"],
+    "ExposeHeaders": []
+  }
 ]
 ```
