@@ -26,7 +26,7 @@ export class SylButton extends LitElement {
       .syl-button {
         display: inline-block;
         padding: 10px;
-        background: #5fe1ee;
+        background: var(--button-background, yellow);
         border-radius: 5px;
         cursor: pointer;
       }

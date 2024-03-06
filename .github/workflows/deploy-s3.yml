@@ -32,7 +32,7 @@ jobs:
           folder: dist
           bucket: ${{ secrets.AWS_S3_BUCKET }}
           bucket-region: ${{ secrets.AWS_S3_REGION }}
-          #dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          dist-id: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
           invalidation: /
           delete-removed: true
           no-cache: true

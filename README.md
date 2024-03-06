@@ -9,7 +9,17 @@ Chromatic is a visual testing & review tool that scans every possible UI state a
 ### Github Actions
 
 Security > Secrets and variables > Actions > Secrets tab
-Add Chromatic project token : CHROMATIC_PROJECT_TOKEN
+Add following keys/values :
+
+```
+AWS_S3_BUCKET=***-***-***
+AWS_S3_REGION=**-****-*
+AWS_ACCESS_KEY_ID=**************
+AWS_SECRET_ACCESS_KEY=*************************************
+AWS_CLOUDFRONT_DISTRIBUTION_ID=**************
+
+CHROMATIC_PROJECT_TOKEN=chpt_***************
+```
 
 ## AWS
 
@@ -31,3 +41,7 @@ Dans "Autorisations"
   }
 ]
 ```
+
+### Cloudfront
+
+"Comportement" > "Politique d'en-têtes de réponse" > "Create response headers policy" > Enable good CORS and Securities
